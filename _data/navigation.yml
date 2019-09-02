@@ -1,4 +1,4 @@
 - name: Блог
-  link: /blog.html
+  link: ./blog.html
 - name: Сотрудники
-  link: /staff.html
+  link: ./staff.html
