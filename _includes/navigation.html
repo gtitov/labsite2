@@ -1,7 +1,14 @@
 <nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="current"{% endif %}>
-      {{ item.name }}
-    </a>
-  {% endfor %}
+  <div class="home-menu pure-menu pure-menu-horizontal">
+    <a href="/" class="pure-menu-heading">ЦГИ ИГ РАН</a>
+    <ul class="pure-menu-list">
+      {% for item in site.data.navigation %}
+        <li class="pure-menu-item" {% if page.url == item.link %}class="pure-menu-item pure-menu-selected"{% endif %}>
+          <a href="{{ item.link }}" class="pure-menu-link">
+            {{ item.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>

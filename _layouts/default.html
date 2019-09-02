@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,14 +9,29 @@
     <meta name="keywords" content="IG RAS, geoinformatics, research center, Институт Географии, ЦГИ">
     <meta name="author" content="Gman">
 
-    <title>{{ page.title }}</title>
-    
-    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <!-- CSS -->
+    <!-- Pure css and grid -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    <!-- My css -->
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Jekyll plugins -->
     {% feed_meta %}
     {% seo %}
+
+    <title>{{ page.title }}</title>
 </head>
 <body>
     {% include navigation.html %}
     {{ content }}
+    {% include footer.html %}
 </body>
 </html>
